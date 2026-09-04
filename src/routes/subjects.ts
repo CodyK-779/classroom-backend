@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     const { search, department, page = 1, limit = 10 } = req.query;
 
     const currentPage = Math.max(1, +page);
-    const limitPerPage = Math.max(1, +limit);
+    const limitPerPage = Math.max(10, +limit);
 
     const offset = (currentPage - 1) * limitPerPage;
 
